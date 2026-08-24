@@ -12,17 +12,34 @@ temBorrachaAtras: false
 }
 const perguntas = [
 {
-enunciado: "Pergunta1",
+enunciado: "Silent Hill f se passa na mesma cidade dos EUA que dá nome aos jogos anteriores da franquia.",
 Alternativas: [
-"Alternativa1",
-"alternativa2"
+"falso",
+"verdadeiro"
 ] ,
+
 },
 {
-enunciado: "Pergunta2",
+enunciado: "A história do jogo foi escrita por Ryukishi07, criador das visuais novels Higurashi e Umineko.",
 Alternativas: [
-"Alternativa1",
-"alternativa2"
+"falso",
+"verdadeiro"
+],
+},
+,
+{
+enunciado: "PerAo contrário dos jogos clássicos, a protagonista Hinako carrega uma lanterna e um rádio que chia com a aproximação de monstros.gunta2",
+Alternativas: [
+"falso",
+"verdadeiro"
 ],
 },
 ];
+let atual = 0;
+let perguntaAtual;
+function mostraPergunta() {
+    perguntaatual = pergunta [atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado
+    
+}
+mostraPergunta();
