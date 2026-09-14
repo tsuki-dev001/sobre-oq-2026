@@ -44,9 +44,14 @@ function mostraPergunta() {
     
 }
 function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado ();
+        return;
+    }
 perguntaAtual = perguntas[atual];
 caixaPerguntas.textContent = perguntaAtual.enuncia;
-mostraAlternativa
+caixaAlternativa.textContent = " ";
+mostraAlternativa ();
 }
 
 function mostraAlternativa(){
@@ -58,4 +63,13 @@ atual++;
 mostraPergunta();
 })
 }
+}
+function respostasSelecionadas (opçaoSelecionada){
+    const afirmacoes = opçaoSelecionada.afirmacao;
+    historiaFinal = afirmacoes;
+    atual++;
+    mostraPergunta();
+}
+function mostraResultado() {
+
 }
