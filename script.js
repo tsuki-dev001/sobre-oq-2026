@@ -39,7 +39,23 @@ let atual = 0;
 let perguntaAtual;
 function mostraPergunta() {
     perguntaatual = pergunta [atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativa ();
     
 }
+function mostraPergunta() {
+perguntaAtual = perguntas[atual];
+caixaPerguntas.textContent = perguntaAtual.enuncia;
+mostraAlternativa
+}
+
+function mostraAlternativa(){
+for (const alternativa of perguntaAtual.alternativas) {
+const botaoAlternativa = document.createElement("button");
+botaoAlternativa.textContent = alternativa.texto;
+botaoAlternativa.addEventListener("click", function (){
+atual++;
 mostraPergunta();
+})
+}
+}
