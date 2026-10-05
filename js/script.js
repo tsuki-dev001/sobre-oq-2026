@@ -102,7 +102,7 @@ caixaAlternativas.appendChild(botaoAlternativas);
 }
 
 function respostaSelecionada(opcaoSelecionada){
-const afirmacoes = opcaoSelecionada.afirmacao;
+const afirmacoes =aleatorio(opcaoSelecionada.afirmacao);
 historiaFinal += afirmacoes + " ";
 atual++;
 mostraPergunta();
@@ -110,8 +110,12 @@ mostraPergunta();
 
 function mostraResultado(){
 caixaPerguntas.textContent = "Em 2049...";
-textoResultado.textContent = historiaFinal;
+textoResultado.textContent= historiaFinal;
 caixaAlternativas.textContent = "";
 }
 
+function aleatorio (lista){
+    const posiçao = Math floor( Math. random()*lista.length);
+    return lista [posiçao];
+}
 mostraPergunta();
